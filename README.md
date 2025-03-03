@@ -1,6 +1,8 @@
 # Strike-Client
 A Python Launcher for Premium and Crack accounts without Minecraft Launcher.
 
+For Mac and Linux, the button "Open Mods" doesn't functionnaly because I use subprocess
+
 ## Requirements
 
 ```bash
