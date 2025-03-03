@@ -1,6 +1,13 @@
 # Strike-Client
 A Python Launcher for Premium and Crack accounts without Minecraft Launcher.
 
+## Requirements
+
+```bash
+pip install PyQt5
+pip install portablemc
+```
+
 ## How to compile with PyInstaller
 
 If you want to compile this Python project into a standalone executable, you can use **PyInstaller**. Follow the steps below to do so:
