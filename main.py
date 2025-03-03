@@ -60,7 +60,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Strike Client")
         self.setGeometry(100, 100, 800, 600)
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        html_file_path = os.path.join(script_dir, '/pages/login.html')
+        html_file_path = os.path.join(script_dir, 'pages/login.html')
         self.browser = QWebEngineView(self)
         self.browser.setUrl(QUrl.fromLocalFile(html_file_path))
         self.setCentralWidget(self.browser)
