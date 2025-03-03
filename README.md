@@ -30,3 +30,6 @@ PyInstaller .\main.py --add-data "pages;pages" --onefile
 
 ### Step 3: Start the executable file
 Once the compilation is complete, the executable file will be located in the "dist" folder
+
+### ToDo
+[ ] Switching from Python to C
