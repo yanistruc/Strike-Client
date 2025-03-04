@@ -30,5 +30,6 @@ PyInstaller .\main.py --add-data "pages;pages" --onefile
 Once the compilation is complete, the executable file will be located in the "dist" folder
 
 ## ToDo
-- [ ] Switching from Python to C++
+- [ ] Switching from Python to Rust
 - [x] Add Modrinth Integration
+- [ ] Create Minecraft TCP Tunnel For Host World
