@@ -8,6 +8,7 @@ import portablemc
 import portablemc.cli
 import threading
 import subprocess
+import mods
 
 class PythonBackend(QObject):
     def __init__(self):
@@ -16,8 +17,8 @@ class PythonBackend(QObject):
         self.username = None
         self.email = None
 
-    @pyqtSlot(str, str)
-    def handle_action(self, action, value):
+    @pyqtSlot(str, str, str)
+    def handle_action(self, action, value, value2):
         if action == "play":
             threading.Thread(target=self._start_game_thread, args=(value,)).start()
         elif action == "login":
@@ -33,6 +34,8 @@ class PythonBackend(QObject):
             mods_folder = os.path.join(os.getenv('APPDATA'), '.minecraft', 'mods')
             if os.path.exists(mods_folder):subprocess.run(['explorer', mods_folder])
             else:print("The mods folder doesn't exist.")
+        elif action == "dlmod":
+            mods.downloadmod(value, functions.clean_version(value2), functions.get_loader(value2))
 
     def start_game(self, version):
         if self.crack:
@@ -72,6 +75,22 @@ class MainWindow(QMainWindow):
 
     def on_load_finished(self):
         pass
+
+class functions():
+    def clean_version(version: str) -> str:
+        if "fabric:" in version:
+            return version.replace("fabric:", "")
+        elif "forge:" in version:
+            return version.replace("forge:", "")
+        return version
+    
+    def get_loader(version: str) -> str:
+        if "fabric:" in version:
+            return "fabric"
+        elif "forge:" in version:
+            return "forges"
+        return version
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

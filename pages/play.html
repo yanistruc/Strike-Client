@@ -6,31 +6,43 @@
     <title>Launcher</title>
     <script src="qrc:/qtwebchannel/qwebchannel.js"></script>
     <script src="./js/play-func.js"></script>
+    <script src="./js/mods.js"></script>
     <link href="./css/play-style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <br>
     <div class="container">
-    <select id="version" class="select-menu">
-        <option value="1.8.9">1.8.9</option>
-        <option value="1.20.1">1.20.1</option>
-        <option value="1.20.4">1.20.4</option>
-        <option value="1.21.1">1.21.1</option>
-        <option value="1.21.4">1.21.4</option>
-        <option value="forge:1.8.9">Forge 1.8.9</option>
-        <option value="forge:1.20.1">Forge 1.20.1</option>
-        <option value="forge:1.20.4">Forge 1.20.4</option>
-        <option value="forge:1.21.1">Forge 1.21.1</option>
-        <option value="forge:1.21.4">Forge 1.21.4</option>
-        <option value="fabric:1.20.1">Fabric 1.20.1</option>
-        <option value="fabric:1.20.4">Fabric 1.20.4</option>
-        <option value="fabric:1.21.1">Fabric 1.21.1</option>
-        <option value="fabric:1.21.4">Fabric 1.21.4</option>
-    </select>
+        <select id="version" class="select-menu">
+            <option value="1.8.9">1.8.9</option>
+            <option value="1.20.1">1.20.1</option>
+            <option value="1.20.4">1.20.4</option>
+            <option value="1.21.1">1.21.1</option>
+            <option value="1.21.4">1.21.4</option>
+            <option value="forge:1.8.9">Forge 1.8.9</option>
+            <option value="forge:1.20.1">Forge 1.20.1</option>
+            <option value="forge:1.20.4">Forge 1.20.4</option>
+            <option value="forge:1.21.1">Forge 1.21.1</option>
+            <option value="forge:1.21.4">Forge 1.21.4</option>
+            <option value="fabric:1.20.1">Fabric 1.20.1</option>
+            <option value="fabric:1.20.4">Fabric 1.20.4</option>
+            <option value="fabric:1.21.1">Fabric 1.21.1</option>
+            <option value="fabric:1.21.4">Fabric 1.21.4</option>
+        </select>
+        <br>
+        <button class="button" onclick="handlePlay()">Play</button>
+        <br>
+        <button class="button" onclick="disconnect()">Disconnect Account</button>
+    </div>
     <br>
-    <button class="button" onclick="handlePlay()">Play</button>
     <br>
-    <button class="button" onclick="openmods()">Open Mods</button>
-    <br>
-    <button class="button" onclick="disconnect()">Disconnect Account</button>
+    <div class="container">
+        <h1>Mods</h1>
+        <br>
+        <input type="text" id="searchQuery" placeholder="Rechercher un mod..." class="select-menu"/>
+        <br>
+        <button onclick="searchMods()" class="button">Rechercher</button>
+
+        <div id="results"></div>
+    </div>
 </body>
 </html>

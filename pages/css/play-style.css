@@ -1,6 +1,4 @@
-
 body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,4 +50,23 @@ body {
 .button:hover {
     background-color: darkorange;
     transform: scale(1.1);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.mod {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mod img {
+    max-width: 100px;
+}
+
+.mod-title {
+    font-size: 1.2em;
+    font-weight: bold;
 }
