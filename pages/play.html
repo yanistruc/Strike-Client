@@ -9,7 +9,7 @@
     <script src="./js/mods.js"></script>
     <link href="./css/play-style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body onload="onStart()">
     <br>
     <div class="container">
         <select id="version" class="select-menu">
@@ -32,6 +32,8 @@
         <button class="button" onclick="handlePlay()">Play</button>
         <br>
         <button class="button" onclick="disconnect()">Disconnect Account</button>
+        <br>
+        <button class="button" onclick="closeLauncher()">Close Launcher</button>
     </div>
     <br>
     <br>

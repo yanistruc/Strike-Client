@@ -9,16 +9,16 @@ var pythonBackend = null;
             var change_account;
             if (email == null) {
                 while (email==null) {
-                    storeEmail(prompt("Veuillez entrer votre E-mail"));
+                    storeEmail(prompt("Please enter your email"));
                 }
             } else {
                 while (change_account !== "Y" && change_account !== "N") {
-                    change_account = prompt("Voulez-vous utiliser le dernier compte utilisé ? (Y/N)");
+                    change_account = prompt("Do you want to use the last account used? (Y/N)");
                 }
                 if (change_account === "N") {
                     var email = null;
                     while (email==null) {
-                        email = prompt("Veuillez entrer votre E-mail");
+                        email = prompt("Please enter your email");
                         storeEmail(email);
                     }
                 }
@@ -56,6 +56,6 @@ var pythonBackend = null;
             if (pythonBackend) {
                 pythonBackend.handle_action(action, value, str);
             } else {
-                alert("Erreur : ", pythonBackend);
+                alert("Error : ", pythonBackend);
             }
         }

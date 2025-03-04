@@ -36,7 +36,8 @@ class PythonBackend(QObject):
             else:print("The mods folder doesn't exist.")
         elif action == "dlmod":
             mods.downloadmod(value, functions.clean_version(value2), functions.get_loader(value2))
-
+        elif action == "closeLauncher":
+            QApplication.quit()
     def start_game(self, version):
         if self.crack:
             portablemc.cli.main(["start", version, "-u", self.username])
