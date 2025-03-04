@@ -1,5 +1,5 @@
 function handlePlay() {
-    var version = document.getElementById("version").value;
+    var version = document.getElementById("version_dropdown").value;
     sendAction("play", version)
 }
 
@@ -18,13 +18,13 @@ function sendAction(action, value, str) {
 }
 
 function disconnect() {
-    var version = document.getElementById("version").selectedIndex;
+    var version = document.getElementById("version_dropdown").selectedIndex;
     storeVersion(version)
     window.location.href = "login.html";
 }
 
 function closeLauncher() {
-    var version = document.getElementById("version").selectedIndex;
+    var version = document.getElementById("version_dropdown").selectedIndex;
     storeVersion(version)
     sendAction("closeLauncher")
 }
@@ -45,21 +45,20 @@ function getVersion() {
     if (version) {
         return version;
     } else {
-        return document.getElementById("version").selectedIndex;
+        return document.getElementById("version_dropdown").selectedIndex;
     }
 }
 
 function onStart() {
     var version = getVersion();
-    document.getElementById("version").selectedIndex = version;
+    document.getElementById("version_dropdown").selectedIndex = version;
 }
 
 let selectedIndex = getVersion();
 
-const version_dropdown = document.getElementById('version');
+const version_dropdown = document.getElementById('version_dropdown');
 
 version_dropdown.addEventListener('change', function() {
-    selectedIndex = version_dropdown.selectedIndex;
-
-    storeVersion(selectedIndex);
+    storeVersion(document.getElementById("version_dropdown").selectedIndex);
+    version_dropdown.selectedIndex = getVersion();
 });

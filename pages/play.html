@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Launcher</title>
     <script src="qrc:/qtwebchannel/qwebchannel.js"></script>
-    <script src="./js/play-func.js"></script>
+    <script src="./js/play-func.js" defer></script>
     <script src="./js/mods.js"></script>
     <link href="./css/play-style.css" rel="stylesheet" type="text/css">
 </head>
 <body onload="onStart()">
     <br>
     <div class="container">
-        <select id="version" class="select-menu">
+        <select id="version_dropdown" class="select-menu">
             <option value="1.8.9">1.8.9</option>
             <option value="1.20.1">1.20.1</option>
             <option value="1.20.4">1.20.4</option>
