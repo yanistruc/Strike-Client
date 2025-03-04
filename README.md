@@ -31,4 +31,4 @@ Once the compilation is complete, the executable file will be located in the "di
 
 ## ToDo
 - [ ] Switching from Python to C
-- [ ] Add Modrinth Integration
+- [x] Add Modrinth Integration
