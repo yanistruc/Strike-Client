@@ -52,9 +52,9 @@ var pythonBackend = null;
             }
         }
 
-        function sendAction(action, value) {
+        function sendAction(action, value, str) {
             if (pythonBackend) {
-                pythonBackend.handle_action(action, value);
+                pythonBackend.handle_action(action, value, str);
             } else {
                 alert("Erreur : ", pythonBackend);
             }

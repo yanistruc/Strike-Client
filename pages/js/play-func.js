@@ -9,9 +9,9 @@ new QWebChannel(qt.webChannelTransport, function(channel) {
     pythonBackend = channel.objects.pythonBackend;
 });
 
-function sendAction(action, value) {
+function sendAction(action, value, str) {
     if (pythonBackend) {
-        pythonBackend.handle_action(action, value);
+        pythonBackend.handle_action(action, value, str);
     } else {
         alert("Erreur de communication avec le Launcher.");
     }
