@@ -1,8 +1,6 @@
 # Strike-Client
 A Minecraft Python Launcher .
 
-For Mac and Linux, the button "Open Mods" doesn't functionnaly because I use subprocess
-
 ## Requirements
 
 ```bash
