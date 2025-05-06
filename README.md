@@ -1,4 +1,4 @@
-# Strike-Client (ARCHIVED ! : The new repostory are on Ceroworks/CeroLauncher)
+# Strike-Client (ARCHIVED ! : The new repostory are on Ceroworks/Cero-Launcher)
 A Minecraft Python Launcher .
 
 ## Requirements
